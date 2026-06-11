@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #F0B90B;
+}
+
+/* Light mode */
+.light {
+  --bg:     #FFFFFF;
+  --bg2:    #F8F8F6;
+  --panel:  #F2F2EF;
+  --border: #E4E4E7;
+  --hi:     #09090B;
+  --lo:     #71717A;
+  --card:   #FFFFFF;
+}
+
+/* Dark mode */
+.dark {
+  --bg:     #0B0E11;
+  --bg2:    #0F1318;
+  --panel:  #161A1F;
+  --border: #2B3139;
+  --hi:     #EAECEF;
+  --lo:     #848E9C;
+  --card:   #161A1F;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--hi);
+}
+
+@layer utilities {
+  .text-hi    { color: var(--hi); }
+  .text-lo    { color: var(--lo); }
+  .bg-bg      { background-color: var(--bg); }
+  .bg-bg2     { background-color: var(--bg2); }
+  .bg-panel   { background-color: var(--panel); }
+  .border-line { border-color: var(--border); }
+  .bg-card    { background-color: var(--card); }
+}
